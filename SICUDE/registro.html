@@ -32,21 +32,21 @@
   <div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
     <div class="container">
         <div class="col-lg-6 p-3 mx-auto">
-          <form class="p-5 bg-dark-opaque" method="post" action="conexion.php">
+          <form class="p-5 bg-dark-opaque" method="post" action="registro.php">
             <h4 class="mb-4 text-center">Registrate Aquí</h4>
             <div class="form-group"> <label>Matrícula</label>
-              <input class="form-control" placeholder=""> </div>
+              <input class="form-control" name="matricula" type="text" pattern="[0-9]+" minlength="8" maxlength="8" required="required"> </div>
             <div class="form-group"> <label>Nombre</label>
-              <input class="form-control" placeholder=""> </div>
+              <input class="form-control" name="nombre" type="text" required="required" pattern="[A-Za-z]" minlength="20" maxlength="60"> </div>
             <div class="form-group"> <label>Teléfono</label>
-              <input class="form-control" placeholder=""> </div>
+              <input class="form-control" name="telefono" type="text" required="required" pattern="[0-9]+" minlength="8" maxlength="10"> </div>
             <div class="form-group"> <label>Correo</label>
-              <input class="form-control" placeholder=""> </div>
+              <input class="form-control" name="correo" type="email" required="required"> </div>
             <div class="form-group"> <label>Contraseña</label>
-              <input class="form-control" placeholder=""> </div>
+              <input class="form-control" name="pswd" type="password" minlength="6" maxlength="12" required="required"> </div>
             <div class="form-group"> <label>Repetir contraseña</label>
-              <input class="form-control" placeholder=""> </div><br>
-            <input type="checkbox" id="cbox2" value="second_checkbox">Acepto Términos y Condiciones.
+              <input class="form-control" name="pswdc" type="password" minlength="6" maxlength="12" required="required"> </div>
+            <input type="checkbox" id="cbox2" value="second_checkbox"><a href="http://www.unitec.mx/terminos-y-condiciones">Acepto Términos y Condiciones.
             <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark">Registrar</b></button>
           </form>
         </div>
