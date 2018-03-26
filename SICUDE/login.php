@@ -18,7 +18,7 @@ else{
     echo "No existe el usuario o no coincide con la contraseña ingresada";
   }
   else{
-    echo "Bienvenido Cliente";
+    include("principal.html");
     /*$respuesta=mysqli_query($conexion,$consulta);
     while($rows=mysqli_fetch_array($respuesta)){
     echo "<br>ID PERSONA: ".$rows[0]."<br>";
