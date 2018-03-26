@@ -16,9 +16,10 @@ if($pass==$rpass){
 		echo mysqli_error($conexion);
 	}
 	else{
-		echo 'USTED HA SIDO REGISTRADO CORRECTAMENTE';
+		//$passHash = password_hash($pass, PASSWORD_BCRYPT);
 		$registrar="INSERT INTO usuario VALUES('$matricula','$nombre','$telefono','$correo','$pass')";
 		mysqli_query($conexion,$registrar);
+		echo 'USTED HA SIDO REGISTRADO CORRECTAMENTE';
 		include("index.html");
 	}
 	mysqli_close($conexion);

@@ -10,6 +10,8 @@ if(mysqli_connect_errno($db_nombre)){
   echo mysqli_error($conexion);
 }
 else{
+  //$passHash = password_hash($pass, PASSWORD_BCRYPT);
+  //$passVerifica = password_verify($pass, $passHash);
   $consulta="SELECT matricula FROM usuario WHERE matricula LIKE '$matricula' AND password LIKE '$pass'" ;
   $resultado=mysqli_num_rows(mysqli_query($conexion,$consulta));
   if($resultado==0){
