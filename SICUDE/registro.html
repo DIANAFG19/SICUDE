@@ -11,6 +11,7 @@
   <script src="https://d33wubrfki0l68.cloudfront.net/js/12e3ca424c3c55e3d306e6423ed9e81f260dd657/aquamarine/js/navbar-ontop.js"></script>
   <!-- Script: Animated entrance -->
   <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
+</script> 
 </head><body>
   <!-- Navbar -->
   <nav class="navbar-expand-md navbar-primary navbar fixed-top bg-pr">
@@ -37,7 +38,7 @@
             <div class="form-group"> <label>Matrícula</label>
               <input class="form-control" name="matricula" type="text" pattern="[0-9]+" minlength="8" maxlength="8" required="required"> </div>
             <div class="form-group"> <label>Nombre</label>
-              <input class="form-control" name="nombre" type="text" required="required" pattern="[A-Za-z]" minlength="20" maxlength="60"> </div>
+              <input class="form-control" name="nombre" type="text" required="required" minlength="20" maxlength="60"> </div>
             <div class="form-group"> <label>Teléfono</label>
               <input class="form-control" name="telefono" type="text" required="required" pattern="[0-9]+" minlength="8" maxlength="10"> </div>
             <div class="form-group"> <label>Correo</label>
@@ -46,7 +47,7 @@
               <input class="form-control" name="pswd" type="password" minlength="6" maxlength="12" required="required"> </div>
             <div class="form-group"> <label>Repetir contraseña</label>
               <input class="form-control" name="pswdc" type="password" minlength="6" maxlength="12" required="required"> </div>
-            <input type="checkbox" id="cbox2" value="second_checkbox"><a href="http://www.unitec.mx/terminos-y-condiciones">Acepto Términos y Condiciones.
+            <input type="checkbox" name="terminos">Acepto Términos y Condiciones.
             <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark">Registrar</b></button>
           </form>
         </div>
