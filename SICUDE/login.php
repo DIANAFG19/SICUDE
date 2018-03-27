@@ -1,4 +1,10 @@
 <?php
+/*
+Editado 26/03/18 Luis Ivan Herrera Equihua
+    código alternativo de $consulta
+*/
+
+
 $matricula=$_POST['matricula'];
 $pass=$_POST['pswd'];
 $db_host="198.91.81.6";
@@ -12,7 +18,11 @@ if(mysqli_connect_errno($db_nombre)){
 else{
   //$passHash = password_hash($pass, PASSWORD_BCRYPT);
   //$passVerifica = password_verify($pass, $passHash);
+
   $consulta="SELECT matricula FROM usuario WHERE matricula LIKE '$matricula' AND password LIKE '$pass'" ;
+  
+  //$consulta="SELECT no_cuenta FROM alumno WHERE no_cuenta LIKE '$matricula' AND password LIKE '$pass'" ;
+
   $resultado=mysqli_num_rows(mysqli_query($conexion,$consulta));
   if($resultado==0){
     echo "No existe el usuario o no coincide con la contraseña ingresada";
