@@ -1,5 +1,6 @@
 /*
 creación 26/03/18 Luis Ivan Herrera Equihua
+edición 29/03/18 LIHE añadir password a usuario alumno y coordinador
 
 
 */
@@ -20,7 +21,8 @@ create table alumno(
 	a_materno varchar(30),
 	id_horario varchar(10),
 	id_doc integer,
-	status_cta varchar(8));
+	status_cta varchar(8),
+	password varchar(30));
 
 create table documentos(
 	id_doc integer primary key not null auto_increment,
@@ -40,7 +42,8 @@ create table coordinador(
 	nombre varchar(30),
 	a_paterno varchar(30),
 	a_materno varchar(30),
-	status_cta varchar(8));
+	status_cta varchar(8),
+	password varchar(30));
 
 create table inscripciones(
 	id_inscripcion integer primary key not null auto_increment,
