@@ -7,9 +7,9 @@ echo $_FILES[uploadedfile][name];
 	{$msg=$msg."El archivo es mayor que 200KB, debes reduzcirlo antes de subirlo<BR>";
 	$uploadedfileload="false";}*/
 
-if (!($_FILES[uploadedfile][type] =="image/pjpeg" OR $_FILES[uploadedfile][type] =="image/gif"))
+/*if (!($_FILES[uploadedfile][type] =="image/pjpeg" OR $_FILES[uploadedfile][type] =="image/gif"))
 	{$msg=$msg." Tu archivo tiene que ser JPG o GIF. Otros archivos no son permitidos<BR>";
-	$uploadedfileload="false";}
+	$uploadedfileload="false";}*/
 
 $file_name=$_FILES[uploadedfile][name];
 $taget_path="/home/sicudex1/public_html/uploads/$file_name";
