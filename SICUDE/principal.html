@@ -1,3 +1,4 @@
+<?include ("seguridadLogin.php");?>
 <html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,6 +45,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Botón para salir -->
+  <form method="POST" action="index.html">
+     <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark" name="registro">Salir</b></button>
+  </form>
 
   <div class="text-center">
   <b><h2>Actividades Deportivas</h2></b>
@@ -105,6 +110,11 @@
   <button type="button" class="btn btn-warning">Jazz Funk</button>  
   <button type="button" class="btn btn-warning">Ajedrez</button>  
   <button type="button" class="btn btn-warning">Maquillaje Artistico</button>  
-  <button type="button" class="btn btn-warning">Produccion de video</button>  
+  <button type="button" class="btn btn-warning">Produccion de video</button> 
+
 
 </div>
+  <!-- JavaScript dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  
+</body></html>

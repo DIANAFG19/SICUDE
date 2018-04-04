@@ -23,19 +23,20 @@ else{
   //$passVerifica = password_verify($pass, $passHash);
 
   $consulta="SELECT no_cuenta FROM alumno WHERE no_cuenta LIKE '$no_cuenta' AND password LIKE '$pass'" ;
+
   
   //$consulta="SELECT no_cuenta FROM alumno WHERE no_cuenta LIKE '$no_cuenta' AND password LIKE '$pass'" ;
 
   $resultado=mysqli_num_rows(mysqli_query($conexion,$consulta));
-  if($resultado==0){
-    echo "No existe el alumno o no coincide con la contraseña ingresada";
+
+  if($resultado==1){
+    //include("principal.html");
+    session_start();
+    $_SESSION['Autenticado'] == "SI";
+    header("Location: principal.html");
   }
   else{
-    include("principal.html");
-    /*$respuesta=mysqli_query($conexion,$consulta);
-    while($rows=mysqli_fetch_array($respuesta)){
-    echo "<br>ID PERSONA: ".$rows[0]."<br>";
-    include("compras.html");*/
+    header("Location: login.php?errorusuario=si");
   }
 }
 mysqli_close($conexion);

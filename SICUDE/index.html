@@ -32,6 +32,13 @@
   <div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
     <div class="container">
         <div class="col-lg-6 p-3 mx-auto">
+            <!-- Aquí se validará la ssión del usuario -->
+<?if ($_GET["errorusuario"]=="si"){?>
+<font color="red"><b>Datos incorrectos</b></font>
+<?}else{?>
+Introduce tu nombre de usuario y contraseña
+<?}?>
+
           <form class="p-5 bg-dark-opaque" method="post" action="login.php">
             <h4 class="mb-4 text-center">Ingresa Aquí</h4>
             <div class="form-group"> <label>Número de matrícula</label>
