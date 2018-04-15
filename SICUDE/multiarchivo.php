@@ -6,12 +6,14 @@
   <title>SICUDE</title>
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="Estilos.css">
   <link rel="stylesheet" href="estilos/theme.css" type="text/css">
   <!-- Script: Make my navbar transparent when the document is scrolled to top -->
   <script src="https://d33wubrfki0l68.cloudfront.net/js/12e3ca424c3c55e3d306e6423ed9e81f260dd657/aquamarine/js/navbar-ontop.js"></script>
   <!-- Script: Animated entrance -->
   <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
 </head><body>
+
   <!-- Navbar -->
   <nav class="navbar-expand-md navbar-primary navbar fixed-top bg-pr">
     <div class="container">
@@ -39,20 +41,40 @@
 Introduce tus doumentos
 <?}?>          
           <!--Referencias : https://norfipc.com/inf/como-subir-fotos-imagenes-servidor-web.php -->
-          <form class="p-5 bg-dark-opaque" method="post" action="login.php">
+          
             <h4 class="mb-4 text-center">Ingresa Aquí</h4>
-
+            
               <div class="text-center" id="formsubida">
                 <div class="form-group"> 
-                  <b><h2>Sube tus documentos para terminar el registro</h2></b>
-                  <form enctype="multipart/form-data" action="subidaDocs.php" method="POST">
-                  <input name="uploadedfile1" type="file" />
-                  <input type="submit" value="Subir archivo" />
-                </form> 
-              </div>
-            <br><br>
-            <div class="form-group"><a href="registro.html">Registrate aquí</a></div>
-          </form>
+                  <b><h4>Sube tus documentos para terminar el registro</h4></b>
+                  
+                  <form enctype="multipart/form-data" action="guardardocs.php" method="POST">
+                  <table>
+  <TR>
+    <td><label>Archivo:</label></td>
+
+    <td> 
+      <select name="tipo">
+        <option value="credencial">Credencial</option>
+        <option value="certmed">Certificado médico</option>
+        <option value="horario">Horario</option>
+      </select> 
+  </td>
+  </TR>
+  <TR>
+    <td><label>Usuario:</label></td>
+    <td><label><input type="text" name="no_cuenta"/></label></td>
+  </TR>
+</table>
+  <div class="form-group"> 
+    <input class="form-control" name="uploadedfile" type="file" required="required"> 
+  </div>
+  <br/>
+
+  <input type="submit" value="Subir archivo" />
+</form> 
+
+
         </div>
       </div>
     </div>
@@ -80,4 +102,3 @@ Introduce tus doumentos
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   
 </body></html>
-	

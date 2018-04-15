@@ -1,6 +1,7 @@
 <html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 29/03/18 LIHE edición de formulario de registro para homologar según la BD implementada -->
   <!-- PAGE settings -->
   <link rel="icon" href="Imagenes/icono.ico">
   <title>SICUDE</title>
@@ -11,6 +12,7 @@
   <script src="https://d33wubrfki0l68.cloudfront.net/js/12e3ca424c3c55e3d306e6423ed9e81f260dd657/aquamarine/js/navbar-ontop.js"></script>
   <!-- Script: Animated entrance -->
   <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
+</script> 
 </head><body>
   <!-- Navbar -->
   <nav class="navbar-expand-md navbar-primary navbar fixed-top bg-pr">
@@ -32,26 +34,17 @@
   <div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
     <div class="container">
         <div class="col-lg-6 p-3 mx-auto">
-            <!-- Aquí se validará la ssión del usuario -->
-<?if ($_GET["errorusuario"]=="si"){?>
-<font color="red"><b>Datos incorrectos</b></font>
-<?}else{?>
-Introduce tus doumentos
-<?}?>          
-          <!--Referencias : https://norfipc.com/inf/como-subir-fotos-imagenes-servidor-web.php -->
-          <form class="p-5 bg-dark-opaque" method="post" action="login.php">
-            <h4 class="mb-4 text-center">Ingresa Aquí</h4>
-
-              <div class="text-center" id="formsubida">
-                <div class="form-group"> 
-                  <b><h2>Sube tus documentos para terminar el registro</h2></b>
-                  <form enctype="multipart/form-data" action="subidaDocs.php" method="POST">
-                  <input name="uploadedfile1" type="file" />
-                  <input type="submit" value="Subir archivo" />
-                </form> 
-              </div>
-            <br><br>
-            <div class="form-group"><a href="registro.html">Registrate aquí</a></div>
+          <form class="p-5 bg-dark-opaque" method="post" action="multiarchivo.php">
+            <h4 class="mb-4 text-center">Has sido registrado</h4>
+            <div class="form-group"> <label>Verifica que tus documentos sean correctos</label>
+            <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark" name="registro">Regresar</b></button>
+          </form>
+            <br></br>
+            <form  method="post" action="principal.html">
+            <h4 class="mb-4 text-center">Inscribete a tus actividades</h4>
+            <div class="form-group"> <label>Ir a la página principal</label>
+            <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark" name="registro">Inscripciones</b></button>
+          </div>
           </form>
         </div>
       </div>
@@ -78,6 +71,5 @@ Introduce tus doumentos
   </div>
   <!-- JavaScript dependencies -->
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  
+
 </body></html>
-	

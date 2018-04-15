@@ -4,6 +4,9 @@ Editado 26/03/18 Luis Ivan Herrera Equihua
 	Código alternativo para registro (inconcluso)
 
 */
+$no_cuenta=$_POST['no_cuenta'];
+$nombre=$_POST['nombre'];
+$a_paterno=$_POST['a_paterno'];
 $a_materno=$_POST['a_materno'];
 $correo=$_POST['correo'];
 $telefono_casa=$_POST['telefono_casa'];
@@ -13,13 +16,9 @@ $mes=$_POST['mes'];
 $anio=$_POST['anio'];
 $pass=$_POST['pswd'];
 $rpass=$_POST['pswdc'];
-/*
-$a_paterno=$_POST['a_paterno'];
-$a_materno=$_POST['a_materno'];
-$telefono_casa=$_POST['telefono_casa'];
-$telefono_cel=$_POST['telefono_cel'];
-$fecha_nacimiento=$_POST['fecha_nacimiento'];
-*/
+
+
+
 
 
 if($pass==$rpass){
@@ -33,16 +32,24 @@ if($pass==$rpass){
 	}
 	else{
 	
-		$fecha_nacimiento='';
+		$fecha_nacimiento="";
+		$fecha_nacimiento= "0" . $dia . "-0" . $mes . "-" . $anio;
+		echo "$fecha_nacimiento";
+
+
+
 		//$passHash = password_hash($pass, PASSWORD_BCRYPT);
-				$registrar="INSERT INTO alumno( no_cuenta, correo, telefono_casa, telefono_cel, fecha_nacimmiento, nombre, a_paterno, a_materno, status_cta,PASSWORD)
-					VALUES('$no_cuenta','$correo','$telefono_casa','$telefono_cel','$fecha_nacimiento','$nombre','$a_paterno','$a_materno','Activo','$pass')";
+				//$registrar="INSERT INTO alumno( no_cuenta, correo, telefono_casa, telefono_cel, fecha_nacimmiento, nombre, a_paterno, a_materno, status_cta,PASSWORD)
+		$registrar="INSERT INTO alumno
+					VALUES('$no_cuenta','$correo','$telefono_casa','$telefono_cel','$fecha_nacimiento','$nombre','$a_paterno','$a_materno',null,null,'Activo','$pass')";
+
+					
 		
 		//$registrar="INSERT INTO alumno VALUES('$no_cuenta','$nombre','a_paterno','a_materno','$telefono','$correo','$pass')";
 
 		mysqli_query($conexion,$registrar);
 		echo 'USTED HA SIDO REGISTRADO CORRECTAMENTE';
-		include("index.html");
+		include("multiarchivo.php");
 	}
 	mysqli_close($conexion);
 }

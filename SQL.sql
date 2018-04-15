@@ -89,6 +89,13 @@ create table asistencia(
 	retardo boolean,
 	falta boolean);
 
+create table docs(
+	id_doc integer primary key auto_increment,
+	nombre varchar(30),
+	no_cuenta varchar(9),
+	foreign key (no_cuenta) references alumno (no_cuenta)
+	);
+
 /*
 FKs son creadas en constraints 
 para que las tablas puedan crearse sin
@@ -148,5 +155,5 @@ alter table alumno
 alter table documentos
 	add constraint fk1_doc_alumno
 	foreign key (no_cuenta)
-	references documentos (no_cuenta);
+	references alumno (no_cuenta);
 
