@@ -33,7 +33,7 @@ else{
     //include("principal.html");
     session_start();
     $_SESSION['Autenticado'] == "SI";
-    header("Location: principal.html");
+    header("Location: marcos.html");
   }
   else{
     header("Location: login.php?errorusuario=si");
