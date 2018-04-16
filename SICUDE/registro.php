@@ -41,7 +41,7 @@ if($pass==$rpass){
 		//$passHash = password_hash($pass, PASSWORD_BCRYPT);
 				//$registrar="INSERT INTO alumno( no_cuenta, correo, telefono_casa, telefono_cel, fecha_nacimmiento, nombre, a_paterno, a_materno, status_cta,PASSWORD)
 		$registrar="INSERT INTO alumno
-					VALUES('$no_cuenta','$correo','$telefono_casa','$telefono_cel','$fecha_nacimiento','$nombre','$a_paterno','$a_materno',null,null,'Activo','$pass')";
+					VALUES('$no_cuenta','$correo','$telefono_casa','$telefono_cel','$fecha_nacimiento','$nombre','$a_paterno','$a_materno',null,null,'Activo','$pass','alumno')"; 
 
 					
 		

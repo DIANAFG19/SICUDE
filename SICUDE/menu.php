@@ -1,10 +1,4 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <link rel="stylesheet" href="estilos/Estilos.css">
+<html><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 29/03/18 LIHE edición de formulario de registro para homologar según la BD implementada -->
@@ -40,84 +34,28 @@
 <div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
   <div class="container">
     <div class="col-lg-6 p-3 mx-auto">
+      <form class="p-5 bg-dark-opaque">
+        <h4 class="mb-4 text-center">Menú</h4>
+        <center>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <div  class="btn-group-vertical">
+             <INPUT type="button" class="btn btn-secondary" value="Datos personales"  onClick=
+             "parent.NOMBREDELFRAME.location.href=datosalumno.php"></input>
 
+             <INPUT type="button" class="btn btn-secondary" value="Inscripciones"  onClick=
+             "parent.NOMBREDELFRAME.location.href=inscriciones.php"></input>
 
+             <INPUT type="button" class="btn btn-secondary" value="Documentos"  onClick=
+             "parent.NOMBREDELFRAME.location.href=docmentosalumno.php"></input>
 
-      <form class="p-5 bg-dark-opaque" method="post" action="actualiza.php">
-
-
-        <div class="table-responsive">
-          <table class="table">
-           <caption>Datos del alumno</caption>
-           <thead class="thead-light">
-            <tr class="table-light">
-              <th scope="col">#</th>
-              <th scope="col">No. de cuenta</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Apellido paterno</th>
-              <th scope="col">Apellido materno</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Tel. Casa</th>
-              <th scope="col">Tel. celular</th>
-              <th scope="col">Password</th>
-            </tr>
-          </thead>
-          <?php
-          $no_cuenta=$_POST['no_cuenta'];
-          $pass=$_POST['pswd'];
-          $db_host="198.91.81.6";
-          $db_nombre="sicudex1_sistema";
-          $db_alumno="sicudex1_diana";
-          $db_pass="123456";
-          $conexion=mysqli_connect($db_host,$db_alumno,$db_pass,$db_nombre);
-          $id="15333468";
-          $consulta="select * from alumno where no_cuenta = $id";
-          $resultado=mysqli_query($conexion,$consulta);
-          if (!$resultado) {
-            echo("Error: %s\n" . mysqli_error($conexion));
-          }
-
-
-  //necesaria la extracción del usuario
-
-          while ($f=mysqli_fetch_array($resultado)) {
-            ?>
-
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td><?php echo $f['no_cuenta'];?></td>
-                <td><?php echo $f['nombre'];?></td>
-                <td><?php echo $f['a_paterno'];?></td>
-                <td><?php echo $f['a_materno'];?></td>
-                <td><?php echo $f['correo'];?></td>
-                <td><?php echo $f['telefono_casa'];?></td>
-                <td><?php echo $f['telefono_cel'];?></td>
-                <td><?php echo $f['password'];?></td>
-              </tr>
-              <?php
-
-            }
-            mysqli_close($conexion);
-            ?>
-          </tbody>
-
-        </table>  
-      </div>
-      <h4>En caso de que lo necesites, puedes modificar tus datos</h4>
-      <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark" name="registro">Modificar</b></button>
-    </form>
-
-
-
-
-
-
-
-
-
-  </div>
-</div>
+             <INPUT type="button" class="btn btn-secondary" value="Datos personales"  onClick=
+             "parent.NOMBREDELFRAME.location.href=datosalumno.php"></input>
+           </div>
+         </div>
+       </center>
+     </form>
+   </div>
+ </div>
 </div>
 </div>
 <div class="text-rigth bg-primary">

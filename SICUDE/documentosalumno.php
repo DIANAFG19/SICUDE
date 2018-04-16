@@ -43,25 +43,21 @@
 
 
 
-      <form class="p-5 bg-dark-opaque" method="post" action="actualiza.php">
+      <form  method="post" action="actualiza.php">
 
 
-        <div class="table-responsive">
+        <div class="table">
           <table class="table">
-           <caption>Datos del alumno</caption>
+           <caption>Documentos del alumno</caption>
            <thead class="thead-light">
             <tr class="table-light">
               <th scope="col">#</th>
               <th scope="col">No. de cuenta</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Apellido paterno</th>
-              <th scope="col">Apellido materno</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Tel. Casa</th>
-              <th scope="col">Tel. celular</th>
-              <th scope="col">Password</th>
+              <th scope="col">Archivo</th>
             </tr>
           </thead>
+
           <?php
           $no_cuenta=$_POST['no_cuenta'];
           $pass=$_POST['pswd'];
@@ -70,8 +66,10 @@
           $db_alumno="sicudex1_diana";
           $db_pass="123456";
           $conexion=mysqli_connect($db_host,$db_alumno,$db_pass,$db_nombre);
-          $id="15333468";
-          $consulta="select * from alumno where no_cuenta = $id";
+
+          $id="2134567";
+
+          $consulta="select * from docs where no_cuenta = $id";
           $resultado=mysqli_query($conexion,$consulta);
           if (!$resultado) {
             echo("Error: %s\n" . mysqli_error($conexion));
@@ -81,6 +79,7 @@
   //necesaria la extracción del usuario
 
           while ($f=mysqli_fetch_array($resultado)) {
+            $file_name=$f['Imagen'];
             ?>
 
             <tbody>
@@ -88,12 +87,8 @@
                 <th scope="row">1</th>
                 <td><?php echo $f['no_cuenta'];?></td>
                 <td><?php echo $f['nombre'];?></td>
-                <td><?php echo $f['a_paterno'];?></td>
-                <td><?php echo $f['a_materno'];?></td>
-                <td><?php echo $f['correo'];?></td>
-                <td><?php echo $f['telefono_casa'];?></td>
-                <td><?php echo $f['telefono_cel'];?></td>
-                <td><?php echo $f['password'];?></td>
+                
+                <td><?php echo "<img height=300 src='/home/sicudex1/public_html/uploads/$file_name' >"?></td>
               </tr>
               <?php
 
