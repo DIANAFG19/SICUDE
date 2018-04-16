@@ -1,12 +1,4 @@
 <?php
-/*
-Editado 26/03/18 Luis Ivan Herrera Equihua
-    código alternativo de $consulta
-
-Editado 29/03/18 Luis Ivan Herrera Equihua
-    código alternativo de $consulta
-*/
-
 
 $no_cuenta=$_POST['no_cuenta'];
 $pass=$_POST['pswd'];
@@ -19,25 +11,21 @@ if(mysqli_connect_errno($db_nombre)){
   echo mysqli_error($conexion);
 }
 else{
-  //$passHash = password_hash($pass, PASSWORD_BCRYPT);
-  //$passVerifica = password_verify($pass, $passHash);
-
   $consulta="SELECT no_cuenta FROM alumno WHERE no_cuenta LIKE '$no_cuenta' AND password LIKE '$pass'" ;
-
-  
-  //$consulta="SELECT no_cuenta FROM alumno WHERE no_cuenta LIKE '$no_cuenta' AND password LIKE '$pass'" ;
-
   $resultado=mysqli_num_rows(mysqli_query($conexion,$consulta));
-
   if($resultado==1){
-    //include("principal.html");
+    /* Empezamos la sesión */
     session_start();
-    $_SESSION['Autenticado'] == "SI";
+ 
+    /* Creamos la sesión */
+    $_SESSION['username'] = $_POST['no_cuenta'];
+    include("sesion.html");
     header("Location: marcos.html");
   }
   else{
-    header("Location: login.php?errorusuario=si");
+
+    /* Si no hay una sesión creada, redireccionar al index. */
+        header('Location: index.html');
   }
 }
-mysqli_close($conexion);
 ?>
