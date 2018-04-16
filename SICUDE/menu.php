@@ -40,16 +40,16 @@
           <div class="btn-group" role="group" aria-label="Basic example">
             <div  class="btn-group-vertical">
              <INPUT type="button" class="btn btn-secondary" value="Datos personales"  onClick=
-             "parent.NOMBREDELFRAME.location.href=datosalumno.php"></input>
+             "parent.principal.location.href=datosalumno.php"></input>
 
              <INPUT type="button" class="btn btn-secondary" value="Inscripciones"  onClick=
-             "parent.NOMBREDELFRAME.location.href=inscriciones.php"></input>
+             "parent.principal.location.href=inscriciones.php"></input>
 
              <INPUT type="button" class="btn btn-secondary" value="Documentos"  onClick=
-             "parent.NOMBREDELFRAME.location.href=docmentosalumno.php"></input>
+             "parent.principal.location.href=docmentosalumno.php"></input>
 
              <INPUT type="button" class="btn btn-secondary" value="Datos personales"  onClick=
-             "parent.NOMBREDELFRAME.location.href=datosalumno.php"></input>
+             "parent.principal.location.href=datosalumno.php"></input>
            </div>
          </div>
        </center>

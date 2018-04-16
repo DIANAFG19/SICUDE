@@ -1,0 +1,131 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 29/03/18 LIHE edición de formulario de registro para homologar según la BD implementada -->
+  <!-- PAGE settings -->
+  <link rel="icon" href="Imagenes/icono.ico">
+  <title>SICUDE</title>
+  <!-- CSS dependencies -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="estilos/theme.css" type="text/css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+  <!-- Script: Animated entrance -->
+  <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</script> 
+
+</head><body>
+  <!-- Navbar -->
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" id="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Login <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="principal">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="datosalumno">Datos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="documentosalumno">Documentos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div>
+    <div id="content"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Cover -->
+  <div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
+    <div class="container">
+      <div class="col-lg-6 p-3 mx-auto">
+        <form class="p-5 bg-dark-opaque" method="post" action="registro.php">
+          <h4 class="mb-4 text-center">Registrate Aquí</h4>
+
+          <h4>
+            <a href="http://www.unitec.mx/terminos-y-condiciones">Consulta los términos y condiciones</a> |
+            <a href="http://www.unitec.mx/politicas-de-privacidad">Políticas de privacidad </a> |
+            <a href="https://comunidad.unitec.mx/unitec">Comunidad UNITEC </a> |
+            <a href="https://my.laureate.net/pages/fbalogin.aspx?ReturnUrl=%2fstaff%2fPages%2fhome.aspx">Portal Administrativo </a>
+          </h4>
+        </p>
+        <h5> Contamos con el Acuerdo Secretarial 142 de la SEP de fecha 24 de octubre de 1988&nbsp;
+          <br>Universidad Tecnológica de México. Derechos Reservados 2016 UNITEC. Dirección: Av. Parque Chapultepec No. 56, Piso 1, Col. El Parque. Mun. Naucalpan de Juarez, EdoMéx., 53398. Laureate Education Inc. 
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- JavaScript dependencies -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+
+
+
+  $(document).ready(function(){
+  //inicial
+
+  $('#content').load('/home/sicudex1/public_html/principal.php');
+  alert('working');
+  //manejar clicks en el menú
+  $('ul#nav li a').click(function(){
+    var page = $(this).attr('href');
+    $('#content').load('/home/sicudex1/public_html/' + page + '.php');
+
+    return false;
+  });
+});
+
+
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body></html>
