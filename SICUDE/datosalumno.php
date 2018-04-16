@@ -16,34 +16,18 @@
   <link rel="stylesheet" href="estilos/theme.css" type="text/css">
   <!-- Script: Make my navbar transparent when the document is scrolled to top -->
   <script src="https://d33wubrfki0l68.cloudfront.net/js/12e3ca424c3c55e3d306e6423ed9e81f260dd657/aquamarine/js/navbar-ontop.js"></script>
-  <!-- Script: Animated entrance -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
 </script> 
 </head><body>
   <!-- Navbar -->
-  <nav class="navbar-expand-md navbar-primary navbar fixed-top bg-pr">
+  
+  <!-- Cover -->
+  <div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
     <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-      <div class="collapse navbar-collapse text-center justify-content-center" id="navbar3SupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item mx-3">
-            <a class="nav-link text-light"><b class="text-light text-center w-1000"><b class="border-light"><h1><b>UNITEC</b></h1>
-            </b>
-          </b>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav>
-<!-- Cover -->
-<div class="align-items-center d-flex photo-overlay py-5 cover" style="background-image: url(&quot;Imagenes/Fondo.jpg&quot;);">
-  <div class="container">
-    <div class="col-lg-6 p-3 mx-auto">
+      <div class="col-lg-6 p-3 mx-auto">
 
 
-
-      <form class="p-5 bg-dark-opaque" method="post" action="actualiza.php">
 
 
         <div class="table-responsive">
@@ -104,9 +88,6 @@
 
         </table>  
       </div>
-      <h4>En caso de que lo necesites, puedes modificar tus datos</h4>
-      <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark" name="registro">Modificar</b></button>
-    </form>
 
 
 
@@ -116,8 +97,10 @@
 
 
 
+
+
+    </div>
   </div>
-</div>
 </div>
 </div>
 <div class="text-rigth bg-primary">
@@ -140,6 +123,28 @@
   </div>
 </div>
 <!-- JavaScript dependencies -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+
+
+
+  $(document).ready(function(){
+  //inicial
+
+   //manejar clicks en el menú
+   $('ul#nav li a').click(function(){
+    var page = $(this).attr('href');
+    $('#content').load('/home/sicudex1/public_html/' + page + '.php');
+
+    return false;
+  });
+ });
+
+
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
 </body></html>

@@ -25,7 +25,7 @@
   <div class="text-center">
   <b><h2>Actividades Deportivas</h2></b>
   <p>Revisa los horarios existentes para las actividades deportivas</p>            
-  <img src="Imagenes/deportes.jpg" class="" alt="" width="200" height="100"/> 
+  <img src="Imagenes/deportes.png" class="" alt="" width="200" height="100"/> 
 </div>
 
 <div class="container">
@@ -87,6 +87,28 @@
 
 </div>
   <!-- JavaScript dependencies -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+
+
+
+  $(document).ready(function(){
+  //inicial
+
+   //manejar clicks en el menú
+  $('ul#nav li a').click(function(){
+    var page = $(this).attr('href');
+    $('#content').load('/home/sicudex1/public_html/' + page + '.php');
+
+    return false;
+  });
+});
+
+
+</script>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   
 </body></html>

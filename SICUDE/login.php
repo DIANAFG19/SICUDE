@@ -20,7 +20,7 @@ else{
     /* Creamos la sesión */
     $_SESSION['username'] = $_POST['no_cuenta'];
     include("sesion.html");
-    header("Location: marcos.html");
+    header("Location: marcos2.html");
   }
   else{
 

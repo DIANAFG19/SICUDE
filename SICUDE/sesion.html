@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="estilos/theme.css" type="text/css">
   <!-- Script: Make my navbar transparent when the document is scrolled to top -->
   <script src="https://d33wubrfki0l68.cloudfront.net/js/12e3ca424c3c55e3d306e6423ed9e81f260dd657/aquamarine/js/navbar-ontop.js"></script>
-  <!-- Script: Animated entrance -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
   
 </head><body>
@@ -33,6 +33,28 @@
     <button type="submit" class="btn mt-4 btn-block btn-warning p-2" class="text-dark" name="registro">Salir</b></button>
   </form>
  <!-- JavaScript dependencies -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+
+
+
+  $(document).ready(function(){
+  //inicial
+
+   //manejar clicks en el menú
+  $('ul#nav li a').click(function(){
+    var page = $(this).attr('href');
+    $('#content').load('/home/sicudex1/public_html/' + page + '.php');
+
+    return false;
+  });
+});
+
+
+</script>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   
 </body></html>

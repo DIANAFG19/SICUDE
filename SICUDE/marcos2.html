@@ -16,7 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
-  <!-- Script: Animated entrance -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://d33wubrfki0l68.cloudfront.net/js/fe6311b3c294cba469a3939f21603640522c41e5/aquamarine/js/animate-in.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -50,7 +50,10 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="documentosalumno">Documentos</a>
+                  <li class="nav-item">
+          <a class="nav-link" href="documentosalumno">Documentos</a>
         </li>
+
       </ul>
     </div>
   </nav>
@@ -81,7 +84,7 @@
     <div class="container">
       <div class="col-lg-6 p-3 mx-auto">
         <form class="p-5 bg-dark-opaque" method="post" action="registro.php">
-          <h4 class="mb-4 text-center">Registrate Aquí</h4>
+          <h4 class="mb-4 text-center"></h4>
 
           <h4>
             <a href="http://www.unitec.mx/terminos-y-condiciones">Consulta los términos y condiciones</a> |
@@ -109,9 +112,7 @@
   $(document).ready(function(){
   //inicial
 
-  $('#content').load('/home/sicudex1/public_html/principal.php');
-  alert('working');
-  //manejar clicks en el menú
+   //manejar clicks en el menú
   $('ul#nav li a').click(function(){
     var page = $(this).attr('href');
     $('#content').load('/home/sicudex1/public_html/' + page + '.php');
